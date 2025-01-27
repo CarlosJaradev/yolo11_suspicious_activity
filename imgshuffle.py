@@ -2,11 +2,11 @@ import os
 import shutil
 
 # Define the source directory containing the images
-source_directory = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\images1'  # Change to your actual source directory
+source_directory = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\images1'  # Change to your actual source directory
 
 # Define the target directories
-normal_folder = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\dataset_path\Normal'  # Path to Normal folder
-suspicious_folder = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\dataset_path\Suspicious'  # Path to Suspicious folder
+normal_folder = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\dataset_path\Normal'  # Path to Normal folder
+suspicious_folder = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\dataset_path\Suspicious'  # Path to Suspicious folder
 
 # Ensure the target directories exist
 os.makedirs(normal_folder, exist_ok=True)
@@ -25,7 +25,7 @@ for file_name in os.listdir(source_directory):
             number = int(file_name.split('_')[2].split('.')[0])
             
             # Move files based on the number
-            if 0 <= number <= 1542:  # Move person_nn_0.jpg to person_nn_10.jpg to Normal folder
+            if 0 <= number <= 1530:  # Move person_nn_0.jpg to person_nn_10.jpg to Normal folder
                 shutil.move(file_path, os.path.join(normal_folder, file_name))
                 print(f'Moved {file_name} to Normal folder.')
             else:  # Move person_nn_11.jpg and onwards to Suspicious folder

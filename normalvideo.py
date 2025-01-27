@@ -63,7 +63,7 @@ while True:
                 frame[y1:y2, x1:x2] = blur_obj
             else:
                 # Draw rectangle and add labels for all visible objects
-                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 2)
                 cvzone.putTextRect(frame, f'{track_id}', (x1, y2), 1, 1)
                 cvzone.putTextRect(frame, f'{c}', (x1, y1), 1, 1)
                 

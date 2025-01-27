@@ -29,7 +29,7 @@ while cap.isOpened():
         break
 
     # Save full frame image
-    pa = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\images'
+    pa = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\images'
     image_path = f'{pa}\img_{i}.jpg'
     cv2.imwrite(image_path, frame)
 
@@ -45,7 +45,7 @@ while cap.isOpened():
             if conf[index] > 0.75:
                 x1, y1, x2, y2 = box.tolist()
                 cropped_person = frame[int(y1):int(y2), int(x1):int(x2)]
-                op = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\images1'
+                op = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\images1'
                 output_path = f'{op}\person_nn_{a}.jpg'
 
                 data = {'image_name': f'person_nn_{a}.jpg'}
@@ -69,7 +69,7 @@ cv2.destroyAllWindows()
 df = pd.DataFrame(all_data)
 
 # Path to your CSV file
-csv_file_path = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\nkeypoint.csv'
+csv_file_path = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\nkeypoint.csv'
 
 # Check if the file exists to determine whether to append or create new
 if not os.path.isfile(csv_file_path):

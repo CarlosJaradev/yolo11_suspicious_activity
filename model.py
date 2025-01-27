@@ -4,7 +4,7 @@ from sklearn.metrics import accuracy_score
 import xgboost as xgb
 
 # Load the dataset CSV file
-df = pd.read_csv(r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\dataset_path\dataset_pathdataset.csv')
+df = pd.read_csv(r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\dataset_path\dataset_pathdataset.csv')
 
 # Prepare feature matrix X and target vector y
 X = df.drop(['label', 'image_name'], axis=1)  # Drop the label and image_name columns
@@ -38,4 +38,4 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy}")
 
 # Save the trained model to a file
-model.save_model(r"C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\trained_model.json")
+model.save_model(r"C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\trained_model.json")

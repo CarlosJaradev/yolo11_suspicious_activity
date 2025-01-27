@@ -16,12 +16,12 @@ seconds = round(frames / fps)
 
 frame_total = 2000
 i = 0
-a = 1543 # Start from 848 forcefully
+a = 1531 # Start from 848 forcefully
 
 all_data = []
 
 # Define output path for cropped images
-output_path_dir = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\images1'
+output_path_dir = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\images1'
 
 while cap.isOpened():
     # Set the position in milliseconds
@@ -32,7 +32,7 @@ while cap.isOpened():
         break
 
     # Save full frame image
-    pa = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\images'
+    pa = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\images'
     image_path = f'{pa}\img_{i}.jpg'
     cv2.imwrite(image_path, frame)
 
@@ -71,7 +71,7 @@ cv2.destroyAllWindows()
 df = pd.DataFrame(all_data)
 
 # Path to your CSV file
-csv_file_path = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\nkeypoint.csv'
+csv_file_path = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\nkeypoint.csv'
 
 # Check if the file exists to determine whether to append or create new
 if not os.path.isfile(csv_file_path):

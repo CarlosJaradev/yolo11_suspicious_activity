@@ -2,9 +2,9 @@ import os
 import pandas as pd
 
 
-df = pd.read_csv(r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\nkeypoint.csv')
+df = pd.read_csv(r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\nkeypoint.csv')
 
-dataset_path = r'C:\Users\freed\Downloads\yolo11_suspicious_activity-main\yolo11_suspicious_activity-main\dataset_path'
+dataset_path = r'C:\Users\danny\Downloads\PROYECTOTESIS2025\SUSPICIOUS BEHAVIOR DETECTOR\yolo11_suspicious_activity\dataset_path'
 sus_path = os.path.join(dataset_path, 'Suspicious')
 normal_path = os.path.join(dataset_path, 'Normal')
 
